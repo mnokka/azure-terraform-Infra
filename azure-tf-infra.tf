@@ -8,15 +8,6 @@ terraform {
 provider "azurerm" {
   features {}
 }
-# Backend for storing tfstate (see ./azure-storage)
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "az-tf-infra-storage"
-    storage_account_name = "azitfinfrastatestorage"
-    container_name       = "az-if-infra-tfstate-container"
-    key                  = "az-tf-infra.tfstate"
-  }
-}
 # Resource group
 resource "azurerm_resource_group" "az_tf_infra" {
   name     = "az-tf-infra"
