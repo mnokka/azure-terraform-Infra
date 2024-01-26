@@ -20,13 +20,15 @@ resource "azurerm_virtual_network" "az_tf_infra_vnet" {
   location            = azurerm_resource_group.az_tf_infra.location
   resource_group_name = azurerm_resource_group.az_tf_infra.name
 }
-# Subnet
+
+#Subnet
 resource "azurerm_subnet" "az_tf_infra_subnet" {
   name                 = "az-tf-infra-subnet"
   resource_group_name  = azurerm_resource_group.az_tf_infra.name
-  virtual_network_name = azurerm_virtual_network.az_tf_vnet.name
+  virtual_network_name = azurerm_virtual_network.az_tf_infra_vnet.name  # Corrected reference
   address_prefixes     = ["10.0.2.0/24"]
 }
+
 # Availability Set
 resource "azurerm_availability_set" "az_tf_infra_availability_set" {
   name                         = "az-tf-infra-availability-set"
