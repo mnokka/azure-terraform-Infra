@@ -22,8 +22,9 @@ Setup
     
 
 Running the Example
-
-    Initialize Terraform:
+          
+    Initialize az cli and Terraform:
+    nix-shell
     terraform init
 
 Plan the deployment (this shows you what will happen without actually performing the deployment):
