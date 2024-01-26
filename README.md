@@ -5,8 +5,12 @@ Start nix-shell with Azure CLI:
 
   *nix-shell*
 
+Log to Azure:
+
+  *az login*
+
 <br>
 <br>
   DO NOT STORE terraform.tfvars file to public git!
-  
+
 
