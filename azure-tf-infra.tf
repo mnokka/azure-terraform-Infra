@@ -110,11 +110,11 @@ size                            = "Standard_DS1_v2"
     sku       = "18.04-LTS"
     version   = "latest"
   }
-  admin_username                  = "karim"
+  admin_username                  = "mika"
   disable_password_authentication = true
   admin_ssh_key {
-    username   = "karim"
-    public_key = local.ssh_keys["karim"]
+    username   = "mika"
+    public_key = local.ssh_keys["mika"]
   }
 }
 
