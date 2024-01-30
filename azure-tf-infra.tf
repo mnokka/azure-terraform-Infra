@@ -67,7 +67,7 @@ resource "azurerm_network_security_group" "ghaf_az_tf_infra_nsg" {
 # Public IP
 resource "azurerm_public_ip" "ghaf_az_tf_infra_public_ip" {
   name                = "ghaf-az-tf-infra-public-ip"
-  domain_name_label   = "ghafaztfinfra"
+  domain_name_label   = "mikaghafaztfinfra"
   location            = azurerm_resource_group.ghaf_az_tf_infra.location
   resource_group_name = azurerm_resource_group.ghaf_az_tf_infra.name
   allocation_method   = "Static"
@@ -89,7 +89,7 @@ resource "azurerm_network_interface" "ghaf_az_tf_infra_network_interface" {
 
 # Virtual Machine
 resource "azurerm_linux_virtual_machine" "ghaf_aztfinfra_vm" {
-  name                = "ghaf-aztfinfra"
+  name                = "ghaf-aztfinfra-mika"
   location            = azurerm_resource_group.ghaf_az_tf_infra.location
   resource_group_name = azurerm_resource_group.ghaf_az_tf_infra.name
   network_interface_ids = [
